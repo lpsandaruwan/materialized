@@ -1,0 +1,30 @@
+# Welcome to Materialized Jekyll theme!
+# Jekyll meets angular material
+
+title: Materialized
+email: lpsandaruwan@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Jekyll meets angular material.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+facebook_username: skyblue1992
+github_username:  lpsandaruwan
+gplus_username: LahiruSandaruwan
+linkedin_username: lpsandaruwan
+twitter_username: lpsandaruwan
+
+# jekyll paginate, posts per page
+paginate: 6
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+  - kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+markdown: kramdown

@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<div>
+
+  <md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px" >
+
+    {% for post in paginator.posts%}
+    <md-grid-tile class="red" md-rowspan="2" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
+      <md-tooltip md-direction="top">Click on the post topic to read {{ post.title }}</md-tooltip>
+
+      <div>
+        <h2 class="grid-header">
+          <a href="{{ post.url }}">
+            {{ post.title }}
+            <md-icon class="grid-link">more_horiz</md-icon>
+          </a>
+        </h2>
+
+        <div class="postTag-grid">
+          Tags: {{post.tag}}
+        </div>
+
+        <br>
+        <div class="postExt-grid">
+          {{ post.content | strip_html | truncatewords:25}}
+        </div>
+
+      </div>
+
+      <md-grid-tile-footer>
+        <div>
+          <div class="postDate-grid"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time></div>
+        </div>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+    {% endfor %}
+
+  </md-grid-list>
+
+
+  {% if paginator.total_pages > 1 %}
+    <nav class="pagination">
+      {% if paginator.previous_page %}
+        <a class="paginationLink" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+      {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <em class="paginationLink paginationLinkCurrent">{{ page }}</em>
+      {% elsif page == 1 %}
+        <a class="paginationLink" href="/">{{ page }}</a>
+      {% else %}
+        <a class="paginationLink" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <a class="paginationLink" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+    {% endif %}
+    </nav>
+  {% endif %}
+
+</div>

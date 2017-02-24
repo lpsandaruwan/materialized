@@ -1,0 +1,48 @@
+<div class="site-header-properties" layout="row">
+
+  <div class="md-menu-properties" layout="column">
+    <div flex></div>
+
+    <md-menu>
+
+      <md-button class="md-fab customTheme" aria-label="nav-menu" ng-click="$mdMenu.open()">
+        <md-tooltip>Menu</md-tooltip>
+        <md-icon>dehaze</md-icon>
+      </md-button>
+
+      <md-menu-content>
+        <md-menu-item>
+          <md-button href="/index.html">
+            Home
+          </md-button>
+        </md-menu-item>
+
+        {% for sitePage in site.pages %}
+        {% if sitePage.title %}
+        <md-menu-item>
+          <md-button href="{{sitePage.url | prepend: site.baseurl }}">
+            {{sitePage.title}}
+          </md-button>
+        </md-menu-item>
+        {% endif %}
+        {% endfor %}
+      </md-menu-content>
+
+    </md-menu>
+
+    <div flex></div>
+  </div>
+
+  <div flex="85">
+    <md-tooltip >Materialized home</md-tooltip>
+    <a href="/index.html">
+      <h1 class="site-header-text">
+        {{site.title}}
+      </h1>
+      <div class="site-description">
+        {{site.description}}
+      </div>
+    </a>
+  </div>
+
+</div>

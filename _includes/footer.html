@@ -1,0 +1,38 @@
+<div>
+
+  <div class="footer-heading">
+
+    {% if site.facebook_username %}
+    {% include facebook.html username=site.facebook_username %}
+    {% endif %}
+    <span class="icon-spacing"></span>
+
+    {% if site.github_username %}
+    {% include github.html username=site.github_username %}
+    {% endif %}
+    <span class="icon-spacing"></span>
+
+    {% if site.gplus_username %}
+    {% include gplus.html username=site.gplus_username %}
+    {% endif %}
+    <span class="icon-spacing"></span>
+
+    {% if site.linkedin_username %}
+    {% include linkedin.html username=site.linkedin_username %}
+    {% endif %}
+    <span class="icon-spacing"></span>
+
+    {% if site.twitter_username %}
+    {% include twitter.html username=site.twitter_username %}
+    {% endif %}
+
+    <div class="footer-credits">
+      Copyright (C) 2017 Materialized Jekyll theme by
+      <a href="http://lahiru.site" >
+        <md-tooltip md-direction="right">"http://lahiru.site"</md-tooltip>
+        <strong>Lahiru Pathirage</strong>
+      </a>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body ng-app="ngModule" ng-controller="ngController">
+
+  <div class="inner-body">
+    <div class="site-wrapper">
+      <div class="site-header-text">
+        {% include header.html %}
+      </div>
+
+      <div class="site-content">
+        <div class="body-content">
+          {{ content }}
+        </div>
+      </div>
+
+      <div class="site-footer">
+        {% include footer.html %}
+      </div>
+
+    </div>
+  </div>
+
+  </body>
+
+</html>
