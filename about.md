@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![profile-image](../images/prof.png){:height="400" style="float: left; padding-right: 20px"}
+![profile-image](../images/prof.png){:height="300" style="float: left; padding-right: 20px"}
 <h3>Hi,</h3>
 
 My name is [Lahiru Pathirage]("http://lahiru.site"), a full-stack developer from Sri Lanka.

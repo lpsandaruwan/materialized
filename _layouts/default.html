@@ -5,15 +5,17 @@
 
   <body ng-app="ngModule" ng-controller="ngController" ng-cloak>
 
-  <div class="inner-body">
+  <div>
     <div class="site-wrapper">
       <div class="site-header-text">
         {% include header.html %}
       </div>
 
       <div class="site-content">
-        <div class="body-content">
-          {{ content }}
+        <div class="inner-body">
+          <div class="body-content">
+            {{ content }}
+          </div>
         </div>
       </div>
 

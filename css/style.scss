@@ -9,7 +9,10 @@ $base-font-weight: 400;
 $small-font-size:  15px;
 $base-line-height: 1.5;
 
+$font-weight-normal: 400;
+
 $spacing-unit:     30px;
+$base-spacing: $base-line-height * 1em;
 
 $text-color: #363636;
 $background-color: #ffffff;
@@ -18,6 +21,10 @@ $brand-color: red;
 $grey-color: #605e63;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+$light-gray-color: #bababa;
+$medium-gray-color: #353535;
+$primary-color: #313131;
+
 
 
 /**
@@ -57,7 +64,11 @@ dl, dd, ol, ul, figure {
 }
 
 .md-fab {
-  background-color: red !important;
+  background-color: $text-color !important;
+
+  &:hover {
+    background-color: red !important;
+  }
 }
 
 
@@ -97,20 +108,18 @@ body {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
 
-  background: #bdc3c7; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #bdc3c7 , #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #bdc3c7 , #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .inner-body {
   background-color: $background-color;
   margin: 0 auto;
   max-width: 1200px;
-  opacity: .97;
 
-  -webkit-box-shadow: -2px 0px 25px 1px rgba(0,0,0,0.45);
-  -moz-box-shadow: -2px 0px 25px 1px rgba(0,0,0,0.45);
-  box-shadow: -2px 0px 25px 1px rgba(0,0,0,0.45);
+  -webkit-box-shadow: -1px -1px 14px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px -1px 14px -3px rgba(0,0,0,0.75);
+  box-shadow: -1px -1px 14px -3px rgba(0,0,0,0.75);
+
+  z-index: -1;
 }
 
 @media screen and (min-width: 1367px) {
@@ -175,6 +184,7 @@ ul, ol, dl, figure,
 .site-content{
   flex: 1 1 auto;
   overflow-y: auto;
+  padding-top: 15px;
 }
 
 .site-footer{
@@ -428,7 +438,7 @@ pre {
  * Site header
  */
 .site-header-properties {
-  //border-bottom: 2px solid #aaaaaa;
+  border-bottom: 2px solid #aaaaaa;
   -webkit-box-shadow: -3px 10px 5px -9px rgba(0,0,0,0.45);
   -moz-box-shadow: -3px 10px 5px -9px rgba(0,0,0,0.45);
   box-shadow: -3px 10px 5px -9px rgba(0,0,0,0.45);
@@ -447,6 +457,38 @@ pre {
   letter-spacing: 3px;
   padding-bottom: 15px;
   text-indent: 6px;
+}
+
+.site-header {
+  @extend %clearfix;
+  padding: $base-spacing 0;
+  margin-bottom: $base-spacing;
+  border-bottom: 1px solid rgba($light-gray-color, .5);
+
+  h1 {
+    margin: 0;
+    font-weight: $font-weight-normal;
+    font-size: rem(24);
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  .navbar {
+    float: right;
+  }
+
+  a {
+    color: $medium-gray-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: red;
+    }
+  }
+
 }
 
 .page-title {
