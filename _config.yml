@@ -5,7 +5,7 @@ title: Materialized
 email: lpsandaruwan@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Jekyll meets angular material.
-baseurl: "materialized" # the subpath of your site, e.g. /blog
+baseurl: "/materialized" # the subpath of your site, e.g. /blog
 url: "http://lahiru.site" # the base hostname & protocol for your site, e.g. http://example.com
 
 facebook_username: skyblue1992
