@@ -29,12 +29,12 @@ Lahiru Pathirage (C) 2017
 
 
 #### License
-Materialize is a free jekyll template: you can redistribute it and/or modify
+Materialized is a free jekyll template: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Materialize jekyll theme is distributed in the hope that it will be useful,
+Materialized jekyll theme is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
