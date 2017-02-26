@@ -26,6 +26,11 @@ $medium-gray-color: #353535;
 $primary-color: #313131;
 
 
+/** remove outlines **/
+a {
+  outline: 0 !important;
+}
+
 
 /**
  * Reset some basic elements
@@ -200,6 +205,7 @@ img {
     vertical-align: middle;
 }
 
+
 /**
  * Figures
  */
@@ -210,6 +216,7 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
+
 
 /**
  * Lists
@@ -225,6 +232,7 @@ li {
     }
 }
 
+
 /**
  * Headings
  */
@@ -235,6 +243,7 @@ h1 {
 h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
 }
+
 
 /**
  * Links
@@ -279,6 +288,7 @@ a {
   }
 }
 
+
 /**
  * Blockquotes
  */
@@ -294,6 +304,7 @@ blockquote {
     margin-bottom: 0;
   }
 }
+
 
 /**
  * Code formatting
@@ -331,6 +342,7 @@ pre {
         clear: both;
     }
 }
+
 
 /**
  * Icons
@@ -466,9 +478,7 @@ pre {
   border-bottom: 1px solid rgba($light-gray-color, .5);
 
   h1 {
-    margin: 0;
     font-weight: $font-weight-normal;
-    font-size: rem(24);
 
     span {
       color: $primary-color;
