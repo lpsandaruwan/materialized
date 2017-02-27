@@ -1,11 +1,11 @@
 <div class="site-header-properties" layout="row">
 
-  <div class="md-menu-properties" layout="column">
+  <div class="md-menu-properties" layout="column" flex="10">
     <div flex></div>
 
     <md-menu>
 
-      <md-button class="md-fab customTheme" aria-label="nav-menu" ng-click="$mdMenu.open()">
+      <md-button class="md-fab md-fab-top-left" aria-label="nav-menu" ng-click="$mdMenu.open()">
         <md-tooltip>Menu</md-tooltip>
         <md-icon>dehaze</md-icon>
       </md-button>
@@ -35,14 +35,16 @@
 
   <div flex="85">
     <md-tooltip >Materialized home</md-tooltip>
-    <a href="{{site.url}}{{site.baseurl}}/index.html">
-      <h1 class="site-header-text">
-        {{site.title}}
-      </h1>
-      <div class="site-description">
-        {{site.description}}
-      </div>
-    </a>
+    <div class="site-header-text">
+      <a href="{{site.url}}{{site.baseurl}}/index.html">
+        <h1>
+          {{site.title}}
+        </h1>
+        <div class="site-description">
+          {{site.description}}
+        </div>
+      </a>
+    </div>
   </div>
 
 </div>

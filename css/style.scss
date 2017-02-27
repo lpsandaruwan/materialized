@@ -472,9 +472,6 @@ pre {
 }
 
 .site-header {
-  @extend %clearfix;
-  padding: $base-spacing 0;
-  margin-bottom: $base-spacing;
   border-bottom: 1px solid rgba($light-gray-color, .5);
 
   h1 {
@@ -482,20 +479,6 @@ pre {
 
     span {
       color: $primary-color;
-    }
-  }
-
-  .navbar {
-    float: right;
-  }
-
-  a {
-    color: $medium-gray-color;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: red;
     }
   }
 
