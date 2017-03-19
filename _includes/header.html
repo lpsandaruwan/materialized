@@ -1,50 +1,68 @@
 <div class="site-header-properties" layout="row">
 
-  <div class="md-menu-properties" layout="column" flex="10">
-    <div flex></div>
+  <div>
+    <div class="md-menu-properties" layout="column">
+      <div flex></div>
+      <md-menu>
+        <md-button class="md-fab md-fab-top-left" aria-label="nav-menu" ng-click="$mdMenu.open()">
+          <md-tooltip>Menu</md-tooltip>
+          <md-icon>dehaze</md-icon>
+        </md-button>
 
-    <md-menu>
+        <md-menu-content>
+          <md-menu-item>
+            <md-button href="{{site.url}}{{site.baseurl}}/index.html">
+              Home
+            </md-button>
+          </md-menu-item>
 
-      <md-button class="md-fab md-fab-top-left" aria-label="nav-menu" ng-click="$mdMenu.open()">
-        <md-tooltip>Menu</md-tooltip>
-        <md-icon>dehaze</md-icon>
-      </md-button>
-
-      <md-menu-content>
-        <md-menu-item>
-          <md-button href="{{site.url}}{{site.baseurl}}/index.html">
-            Home
-          </md-button>
-        </md-menu-item>
-
-        {% for sitePage in site.pages %}
-        {% if sitePage.title %}
-        <md-menu-item>
-          <md-button href="{{sitePage.url | prepend: site.baseurl }}">
-            {{sitePage.title}}
-          </md-button>
-        </md-menu-item>
-        {% endif %}
-        {% endfor %}
-      </md-menu-content>
-
-    </md-menu>
-
-    <div flex></div>
-  </div>
-
-  <div flex="85">
-    <md-tooltip >Materialized home</md-tooltip>
-    <div class="site-header-text">
-      <a href="{{site.url}}{{site.baseurl}}/index.html">
-        <h1>
-          {{site.title}}
-        </h1>
-        <div class="site-description">
-          {{site.description}}
-        </div>
-      </a>
+          {% for sitePage in site.pages %}
+          {% if sitePage.title %}
+          <md-menu-item>
+            <md-button href="{{sitePage.url | prepend: site.baseurl }}">
+              {{sitePage.title}}
+            </md-button>
+          </md-menu-item>
+          {% endif %}
+          {% endfor %}
+        </md-menu-content>
+      </md-menu>
     </div>
   </div>
 
+  <div flex></div>
+
+  <div flex="90" layout-xs="column" layout-gt-xs="row">
+
+    <div flex></div>
+
+    <div>
+      <md-tooltip >Materialized home</md-tooltip>
+      <div class="site-header-text">
+        <a href="{{site.url}}{{site.baseurl}}/index.html">
+          <h1>
+            {{site.title}}
+          </h1>
+          <div class="site-description">
+            {{site.description}}
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div flex></div>
+
+    <div layout-xs="row" layout-gt-xs="column">
+      <div flex></div>
+      <div>
+        <iframe src="https://ghbtns.com/github-btn.html?user=lpsandaruwan&repo=materialized&type=star&count=true&size=large" frameborder="0" scrolling="0" width="150px" height="30px"></iframe>
+      </div>
+
+      <div>
+        <iframe src="https://ghbtns.com/github-btn.html?user=lpsandaruwan&repo=materialized&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="150px" height="30px"></iframe>
+      </div>
+
+      <div flex></div>
+    </div>
+  </div>
 </div>

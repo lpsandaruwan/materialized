@@ -7,7 +7,7 @@ layout: default
   <md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px" >
 
     {% for post in paginator.posts%}
-    <md-grid-tile class="red" md-rowspan="2" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
+    <md-grid-tile class="red" md-rowspan="2" md-colspan="2" md-colspan-sm="1"  md-rowspan-sm="1" md-colspan-xs="1" md-rowspan-xs="1">
       <md-tooltip md-direction="top">Click on the post topic to read {{ post.title }}</md-tooltip>
 
       <div>
